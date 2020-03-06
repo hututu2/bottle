@@ -51,6 +51,7 @@
 
     function add_a_bottle() {
         var text = prompt("这是个什么瓶子呢？", "_____");
+        if(text!=null){
         //创建块
         bottle_sum = bottle_sum + 1;
         var div = document.createElement("div");
@@ -73,7 +74,7 @@
         p.setAttribute("onclick", "this.innerHTML = prompt('换个什么好呢？',this.firstChild.nodeValue);"); //增加修改名称动作
         div.appendChild(p);
         var bottle = document.getElementById("bottle");
-        bottle.appendChild(div);
+        bottle.appendChild(div);}
     }
 
     function remove_a_bottle() {
